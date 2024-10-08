@@ -1,77 +1,39 @@
 * {
     box-sizing: border-box;
-    font-family: Verdana, Tahoma, sans-serif;
+    font-family: Tahoma, sans-serif;
+    padding: 0;
+    margin: 0;
+
 }
 
 /* General styles */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
-/* Responsive layout */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Media queries for different screen sizes */
-@media screen and (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 24px;
-    }
-
-    p {
-        font-size: 16px;
-    }
-
-    /* Adjust other styles as needed for smaller screens */
-}
-
-@media screen and (max-width: 480px) {
-    .container {
-        padding: 5px;
-    }
-
-    h1 {
-        font-size: 20px;
-    }
-
-    p {
-        font-size: 14px;
-    }
-
-    /* Adjust other styles as needed for extra small screens */
-}
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-items: center;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     background-color: #9e31e7;
 }
 
 #box {
-
-    width: 100%;
-    min-height: 100%;
-    padding: 10px;
-    margin: 25vh 0;
+    width: 100vw;
+    height: 100%;
+    padding: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
     background-color: #47126a76;
+}
+
+footer {
+    margin: 0;
 }
 
 h1 {
     text-align: center;
     color: white;
+    margin: 20px;
 }
 
 #profile-pict {
@@ -83,7 +45,7 @@ h1 {
     background: url(./images/DSC09738.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    margin: 0 auto;
+    margin: 40px auto;
     
 }
 
@@ -100,33 +62,23 @@ h1 {
 }
 
 .img-container {
-    position: relative;
-    width: 150px;
-
-}
-
-.img-container::after {
-    content: '';
-    background-color: rgb(255, 255, 255);
     position: absolute;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    height: 15px;
-    width: 15px;
-    right: 54%;
-    top: -32%;
-    
+    padding-right: 400px;
+    padding-top: 95px;
+    width: 100px;
+    display: flex;
 }
+
 
 .img-container img {
     width: inherit;
-    height: 150px;
+    height: 100px;
     border-radius: 50%;
     object-fit: cover;
     position: absolute;
     bottom: 0;
     left: -20px;
-    border: 45px solid rgb(0, 0, 0);
+    border: 25px solid rgb(0, 0, 0);
 
     animation: rotate 3s linear infinite;
     animation-play-state: paused;
@@ -147,17 +99,24 @@ h1 {
 }
 
 .music-container.play {
-    justify-content: space-between;
+    align-items: center;
     display: flex;
-    padding: 0 auto;
-    position: relative;
+    justify-content: center;
+    padding: 20px 50%;
 
+}
+
+.music-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 20px 50%;
 }
 
 .navigation {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-items: center;
+    position: relative;
     z-index: 1;
 }
 
@@ -191,15 +150,19 @@ h1 {
     top: 0;
     left: 20px;
     width: calc(100% - 40px);
-    padding: 10px 10px 10px 150px;
+    padding: 10px 10px 10px 10px;
     opacity: 0;
     transform: translateY(0%);
     transition: transform 0.3s ease-in opacity 0.3s ease-in;
+    justify-content: center;
 }
 
 .music-info h4 {
     margin: 0;
+    padding: 0;
+    width: 100%;
     font-size: 40px;
+    text-align: center;
 }
 
 .music-container.play .music-info {
@@ -222,10 +185,4 @@ h1 {
     height: 100%;
     width: 0%;
     transition: width 0.1s linear;
-}
-
-.nothing {
-    content: '';
-    width: 50px;
-
 }
