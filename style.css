@@ -1,0 +1,231 @@
+* {
+    box-sizing: border-box;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Responsive layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Media queries for different screen sizes */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    /* Adjust other styles as needed for smaller screens */
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 5px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    /* Adjust other styles as needed for extra small screens */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #9e31e7;
+}
+
+#box {
+
+    width: 100%;
+    min-height: 100%;
+    padding: 10px;
+    margin: 25vh 0;
+    background-color: #47126a76;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+#profile-pict {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background: url(./images/DSC09738.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    
+}
+
+.music-container {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 20px 20px 0 rgba(252, 169, 169, 0.6);
+    display: flex;
+    padding: 20px 30px;
+    position: relative;
+    margin: 100px 0;
+    z-index: 10;
+    justify-content: space-evenly;
+}
+
+.img-container {
+    position: relative;
+    width: 150px;
+
+}
+
+.img-container::after {
+    content: '';
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    height: 15px;
+    width: 15px;
+    right: 54%;
+    top: -32%;
+    
+}
+
+.img-container img {
+    width: inherit;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+    border: 45px solid rgb(0, 0, 0);
+
+    animation: rotate 3s linear infinite;
+    animation-play-state: paused;
+}
+
+.music-container.play .img-container img {
+    animation-play-state: running;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.music-container.play {
+    justify-content: space-between;
+    display: flex;
+    padding: 0 auto;
+    position: relative;
+
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.action-btn {
+    background-color: white;
+    border: 0;
+    color: #dfdbdf;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 20px;
+}
+
+.action-btn:hover {
+    box-shadow: 1px 1px 1px 1px #9e31e7;
+}
+
+.action-btn-big {
+    color: #cdc2d0;
+    font-size: 30px;
+}
+
+.action-btn:focus {
+    outline: 0;
+}
+
+.music-info {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 15px 15px 0 0;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: calc(100% - 40px);
+    padding: 10px 10px 10px 150px;
+    opacity: 0;
+    transform: translateY(0%);
+    transition: transform 0.3s ease-in opacity 0.3s ease-in;
+}
+
+.music-info h4 {
+    margin: 0;
+    font-size: 40px;
+}
+
+.music-container.play .music-info {
+    opacity: 1;
+    transform: translateY(-100%);
+}
+
+.progress-container {
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    height: 4px;
+    width: 100%;
+}
+
+.progress {
+    background-color: #f48dfd;
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+.nothing {
+    content: '';
+    width: 50px;
+
+}
