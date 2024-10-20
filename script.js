@@ -9,7 +9,7 @@ const title = document.querySelector('#title')
 const cover = document.querySelector('#cover')
 
 // Song titles
-const songs = ['again', 'answerme', 'Bryan','bryannnn', 'cowboy', 'crossed', 'Darkest Place','do not rush things', 'don\'t stop me now', 'flashh', 'got to do it', 'Haha groove', 'imdown', 'kavi', 'kazinsky', 'Lets Play', 'madamada', 'moveOn', 'no purpose', 'outstanding', 'pleased_2', 'Project_11', 'Project_29', 'Project_33', 'Project_40', 'Project_54', 'Project_68', 'Project', 'Saludji City', 'stranger', 'teddy', 'Through the night', 'To Love You', 'Tonight', 'Vice City', 'waisted', 'watizlov'];
+const songs = ['again', 'answerme', 'Bryan','bryannnn', 'cowboy', 'crossed', 'Darkest Place','do not rush things', 'don\'t stop me now', 'flashh', 'got to do it', 'Haha groove', 'imdown', 'kavi', 'kazinsky', 'Lets Play', 'madamada', 'moveOn', 'no purpose', 'outstanding', 'pleased_2', 'Project_11', 'Project_29', 'Project_33', 'Project_40', 'Project_54', 'Project_68', 'Project', 'Saludji City', 'Soloing Life', 'stranger', 'teddy', 'Through the night', 'To Love You', 'Tonight', 'Vice City', 'waisted', 'watizlov'];
 
 // Keep track of songs
 let songIndex = 0;
